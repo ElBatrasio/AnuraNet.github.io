@@ -31,7 +31,7 @@ export function NavItem({ link }: { link: NavigationLink }) {
           <li>
             {Object.values(link.pages).map((page) => (
               <NavigationMenuLink asChild key={page.path}>
-                <a href={base + page.path.replace(/^\//, '')}>{page.label}</a>
+                <a href={base + page.path}>{page.label}</a>
               </NavigationMenuLink>
             ))}
           </li>
