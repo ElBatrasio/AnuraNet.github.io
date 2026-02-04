@@ -17,7 +17,7 @@ export function NavItem({ link }: { link: NavigationLink }) {
     return (
       <NavigationMenuItem>
         <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-          <a href={base + link.path.replace(/^\//, '')}>{link.label}</a>
+          <a href={base + link.path}>{link.label}</a>
         </NavigationMenuLink>
       </NavigationMenuItem>
     );
