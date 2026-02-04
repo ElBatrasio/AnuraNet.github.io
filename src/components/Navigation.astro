@@ -6,10 +6,16 @@ import { NavMenu } from "@/components/NavMenu.tsx";
 <header
   class="relative z-10 mx-auto flex max-w-screen-lg flex-wrap items-center justify-between p-3 pb-8 font-sans sm:p-6"
 >
-  <a href={import.meta.env.BASE_URL}
-    class="text-3xl font-semibold text-black sm:text-3xl dark:text-white"
-    >{SITE.title}</a
-  >
+  <a href={import.meta.env.BASE_URL} class="flex items-center gap-3">
+    <img 
+      src="/images/anuraworld.png" 
+      alt="AnuraNet Logo" 
+      class="h-10 w-10 sm:h-12 sm:w-12"
+    />
+    <span class="font-poppins text-3xl font-semibold text-black sm:text-3xl dark:text-white">
+      {SITE.title}
+    </span>
+  </a>
   <nav>
     <NavMenu links={Object.values(NAV_LINKS)} client:load />
   </nav>
