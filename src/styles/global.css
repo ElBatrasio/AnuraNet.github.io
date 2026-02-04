@@ -90,13 +90,13 @@
 }
 
 @theme {
-  --color-bg: var(--color-neutral-50);
-  --color-link: oklch(46.97% 0.2734 267.56);
-  --color-muted-text: var(--color-neutral-700);
+  --color-bg: var(--background);                    /* 👈 Use your custom background! */
+  --color-link: oklch(0.45 0.12 115);              /* 👈 Yellow-green link */
+  --color-muted-text: var(--muted-foreground);     /* 👈 Use custom muted color */
 
-  --color-dark-bg: var(--color-neutral-950);
-  --color-dark-link: oklch(73.9% 0.1387 282.47);
-  --color-dark-muted-text: var(--color-neutral-300);
+  --color-dark-bg: var(--background);              /* 👈 Will use dark background in dark mode */
+  --color-dark-link: oklch(0.75 0.15 115);         /* 👈 Brighter yellow-green for dark mode */
+  --color-dark-muted-text: var(--muted-foreground); /* 👈 Use custom dark muted */
 }
 
 /* ensure .link and typography.css are consistent */
