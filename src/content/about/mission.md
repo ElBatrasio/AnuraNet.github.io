@@ -1,0 +1,1 @@
+To accelerate the development and application of high-quality, open-source AI tools for bat acoustic research and monitoring. We achieve this through open and inclusive collaboration, empowering teams worldwide by co-developing shared data standards and best practices.

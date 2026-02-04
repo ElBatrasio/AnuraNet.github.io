@@ -1,0 +1,9 @@
+---
+import { getMembers, getMemberCountsByCountry } from "@/data/members";
+import MapRenderer from "@/components/MapRenderer.tsx";
+
+const members = await getMembers();
+const countries = getMemberCountsByCountry(members);
+---
+
+<MapRenderer client:only counts={countries} />
