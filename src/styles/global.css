@@ -8,8 +8,8 @@
 :root {
   color-scheme: light dark;
   --radius: 0.625rem;
-  --background: oklch(0.97 0.01 140);              /* 👈 Light moss green background */
-  --foreground: oklch(0.25 0.08 140);              /* 👈 Dark moss green text */
+  --background: oklch(0.94 0.04 140);              /* 👈 Light moss green background */
+  --foreground: oklch(0.20 0.10 140);              /* 👈 Dark moss green text */
   --card: oklch(0.99 0.005 140);
   --card-foreground: oklch(0.25 0.08 140);
   --popover: oklch(0.99 0.005 140);
