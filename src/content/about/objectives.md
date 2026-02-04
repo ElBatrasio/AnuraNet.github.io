@@ -1,15 +1,12 @@
-## To Establish and Promote Open Standards.
+## To Build and Promote Open Standards.
 
-To foster the sharing of acoustic data and annotations in open, accessible formats by collaboratively defining and promoting best practices that ensure our collective work is interoperable, reproducible, and provides maximum value to the global research and conservation community.
+We work together to create and encourage open, accessible ways of sharing acoustic data and annotations. By developing best practices as a community, we ensure our collective efforts are easy to share, reuse, and build upon—supporting transparency, collaboration, and progress in research and conservation worldwide.
 
-## To Advance the Development and Dissemination of AI Tools.
+## To Grow and Share AI Tools for All.
 
-To serve as a hub for co-developing, sharing, and discussing open-source AI tools for acoustic monitoring of bats, and to facilitate the exchange of code, models, and expertise to accelerate innovation and ensure powerful tools are freely available to all.
+We aim to be a space where people can come together to co-develop, exchange, and discuss open-source AI tools for bat acoustic monitoring. Through the open sharing of code, models, and knowledge, we hope to inspire innovation and make powerful tools available to everyone interested in protecting and studying bats.
 
-## To Cultivate a Collaborative and Inclusive Community.
+## To Facilitate Access to Knowledge.
 
-To connect researchers, conservationists, and AI experts from around the world by providing a platform that fosters new partnerships, facilitates knowledge sharing, and supports members' projects while respecting individual and institutional autonomy.
+We seek to create inclusive spaces where anyone—scientists and non-scientists alike—can learn, share opinions, and engage with the latest developments from our community. By opening doors to participation, we encourage dialogue, curiosity, and collective growth.
 
-## To Empower the Community Through Knowledge Sharing.
-
-To bridge the gap between complex AI methods and practical bat conservation action by creating and distributing accessible resources, tutorials, and case studies that help practitioners turn acoustic data into ecological insights.

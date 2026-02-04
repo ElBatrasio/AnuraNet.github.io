@@ -1,1 +1,2 @@
-To accelerate the development and application of high-quality, open-source AI tools for bat acoustic research and monitoring. We achieve this through open and inclusive collaboration, empowering teams worldwide by co-developing shared data standards and best practices.
+To serve as a coordinator axis for every person, regardless of budget or expertise level, that wants to contribute to a global anuran acoustic monitoring and research network. We aim to achieve this through international collaboration, the creation of shared and standardized datasets protocols for data collection, the development and spread of Open-science AI tools and the free and easy to understand distribution of knowledge.  
+
