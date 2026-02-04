@@ -12,7 +12,8 @@ export default defineConfig({
       theme: "dark-plus",
     },
   },
-  site: "https://globat-network.github.com",
+  site: "https://elbatrasio.github.io",
+  base: "/AnuraNet.github.io",
   vite: {
     plugins: [tailwindcss()],
   },
