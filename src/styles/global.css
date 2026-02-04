@@ -3,9 +3,6 @@
 @import "tailwindcss";
 @import "./typography.css" layer(components);
 @import "tw-animate-css";
-@import "tailwindcss";
-@import "./typography.css" layer(components);
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 @variant dark (&:where(.dark, .dark *));
@@ -171,4 +168,13 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Prevent navigation menu jitter - force stable rendering */
+[data-slot="navigation-menu-item"] {
+  contain: layout;
+}
+
+[data-slot="navigation-menu-trigger"] {
+  will-change: background-color, color;
 }
