@@ -23,7 +23,7 @@ export const NAV_LINKS: NavigationLinks = {
     label: "About",
     pages: {
       mission: { path: "/about/mission", label: "Our Mission" },
-      // team: { path: "/about/team", label: "Our Team" },  // Commented out - needs API credentials
+      team: { path: "/about/team", label: "Our Team" },  
     },
   },
   // news: {
