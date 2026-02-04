@@ -6,8 +6,7 @@ import { NavMenu } from "@/components/NavMenu.tsx";
 <header
   class="relative z-10 mx-auto flex max-w-screen-lg flex-wrap items-center justify-between p-3 pb-8 font-sans sm:p-6"
 >
-  <a
-    href="/"
+  <a href={import.meta.env.BASE_URL}
     class="text-3xl font-semibold text-black sm:text-3xl dark:text-white"
     >{SITE.title}</a
   >
