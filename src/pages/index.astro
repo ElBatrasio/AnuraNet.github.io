@@ -1,45 +1,104 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
+import "@/styles/global.css";
 
-// import News from "@/components/News.astro";
+import BaseHead from "@/components/BaseHead.astro";
+import Footer from "@/components/Footer.astro";
+import Navigation from "@/components/Navigation.astro";
 import SeoPage from "@/components/SeoPage.astro";
-import batImage from "@/images/bats/Hylorinas.jpeg";
+import heroImage from "@/images/frogs/Hylorinas.jpeg";
 ---
 
-<BaseLayout>
-  <SeoPage slot="head" />
-
-  <div class="py-16 text-center sm:py-16">
-    <div class="mx-auto max-w-4xl px-4">
-      <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
-        Forging Ahead Anuran Conservation Through Artificial Intelligence
-      </h1>
-
-      <p class="mt-6 text-lg leading-8">
-        AnuraNet is a collaborative expert network that promotes the development of vanguard techniques for acoustic monitoring of anurans and citizen-science. Our diverse community of researchers, technologists and conservationists that rise from Iberoamerican collaboration aims to foster and spread the tools key for enhancing our knowledge about anuran populations and their global trends.  
-      </p>
-
-      <div class="mt-10 flex items-center justify-center gap-x-6">
-        <a
-          href="/contact/membership"
-          class="rounded-md border border-transparent bg-zinc-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-zinc-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
-        >
-          Become a Member
-        </a>
-        <a href="/about/mission" class="text-sm leading-6 font-semibold">
-          Learn more <span aria-hidden="true">→</span>
-        </a>
-      </div>
-
-      <div class="mt-10">
-        <Image
-          src={batImage}
-          alt="Rhinoderma darwinii"
-          class="w-full rounded-md object-cover ring-1 ring-zinc-900/10"
-        />
-      </div>
-      <p class="mt-2 text-xs text-gray-500 italic">Placeholder image</p>
+<html lang="en">
+  <BaseHead>
+    <SeoPage />
+  </BaseHead>
+  <body class="hero-page">
+    <!-- Transparent navigation for hero page -->
+    <div class="absolute top-0 left-0 right-0 z-50">
+      <Navigation />
     </div>
-  </div>
-</BaseLayout>
+    
+    <!-- Full-width hero section -->
+    <div class="relative isolate overflow-hidden">
+      <!-- Background Image -->
+      <Image
+        src={heroImage}
+        alt="Frogs in their natural habitat"
+        class="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      
+      <!-- Adjustable dark overlay (change bg-black/60 to /40, /50, /70 for lighter/darker) -->
+      <div class="absolute inset-0 -z-10 bg-black/60"></div>
+
+      <!-- Hero Content -->
+      <div class="mx-auto max-w-4xl px-6 py-32 sm:py-48 lg:py-56">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl drop-shadow-lg animate-fade-in">
+            Forging Ahead Anuran Conservation Through Artificial Intelligence
+          </h1>
+
+          <p class="mt-6 text-lg leading-8 text-gray-100 drop-shadow-md animate-fade-in-delay">
+            AnuraNet is a collaborative expert network that promotes the development of vanguard techniques for acoustic monitoring of anurans and citizen-science. Our diverse community of researchers, technologists and conservationists that rise from Iberoamerican collaboration aims to foster and spread the tools key for enhancing our knowledge about anuran populations and their global trends.
+          </p>
+
+          <div class="mt-10 flex items-center justify-center gap-x-6 animate-fade-in-delay-2">
+            <a
+              href="/contact/membership"
+              class="group rounded-md bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-emerald-500 hover:shadow-xl hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 transition-all duration-200"
+            >
+              Become a Member
+              <span class="inline-block group-hover:translate-x-1 transition-transform duration-200">→</span>
+            </a>
+            <a 
+              href="/about/mission" 
+              class="group text-base font-semibold text-white hover:text-emerald-300 transition-colors duration-200"
+            >
+              Learn more 
+              <span class="inline-block group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Regular content container -->
+    <div class="mx-auto max-w-screen-lg p-3 font-sans sm:p-6">
+      <main class="min-h-[80vh]">
+        <!-- Future content goes here -->
+      </main>
+      <Footer />
+    </div>
+  </body>
+</html>
+
+<style>
+  /* Make navigation transparent on hero page */
+  :global(.hero-page nav) {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  }
+
+  /* Fade-in animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.2s both;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.8s ease-out 0.4s both;
+  }
+</style>
