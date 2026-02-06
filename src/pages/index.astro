@@ -19,8 +19,8 @@ import heroImage from "@/images/frogs/Hylorinas.jpeg";
       <Navigation />
     </div>
     
-    <!-- Full-width hero section -->
-    <div class="relative isolate overflow-hidden">
+    <!-- Full-width hero section with footer inside -->
+    <div class="relative isolate overflow-hidden min-h-screen flex flex-col">
       <!-- Background Image -->
       <Image
         src={heroImage}
@@ -28,12 +28,12 @@ import heroImage from "@/images/frogs/Hylorinas.jpeg";
         class="absolute inset-0 -z-10 h-full w-full object-cover"
       />
       
-      <!-- Adjustable dark overlay (change bg-black/60 to /40, /50, /70 for lighter/darker) -->
+      <!-- Adjustable dark overlay -->
       <div class="absolute inset-0 -z-10 bg-black/60"></div>
 
       <!-- Hero Content -->
-      <div class="mx-auto max-w-4xl px-6 py-32 sm:py-48 lg:py-56">
-        <div class="text-center">
+      <div class="mx-auto max-w-4xl px-6 py-32 sm:py-48 lg:py-56 flex-grow flex items-center">
+        <div class="text-center w-full">
           <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl drop-shadow-lg animate-fade-in">
             Forging Ahead Anuran Conservation Through Artificial Intelligence
           </h1>
@@ -50,27 +50,16 @@ import heroImage from "@/images/frogs/Hylorinas.jpeg";
               Become a Member
               <span class="inline-block group-hover:translate-x-1 transition-transform duration-200">→</span>
             </a>
-            <!-- Learn more button commented out
-            <a 
-              href="/about/mission" 
-              class="group text-base font-semibold text-white hover:text-emerald-300 transition-colors duration-200"
-            >
-              Learn more
-              <span class="inline-block group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true">→</span>
-            </a>
-            -->
           </div>
         </div>
       </div>
+
+      <!-- Footer inside hero with white text -->
+      <div class="mt-auto px-6">
+        <Footer />
+      </div>
     </div>
 
-    <!-- Regular content container -->
-    <div class="mx-auto max-w-screen-lg p-3 font-sans sm:p-6">
-      <main class="min-h-[80vh]">
-        <!-- Future content goes here -->
-      </main>
-      <Footer />
-    </div>
   </body>
 </html>
 
@@ -78,6 +67,28 @@ import heroImage from "@/images/frogs/Hylorinas.jpeg";
   /* Make navigation transparent on hero page */
   :global(.hero-page nav) {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  }
+
+  /* Make footer text white on hero page */
+  :global(.hero-page footer span) {
+    color: white !important;
+  }
+
+  /* Make theme toggle buttons visible on hero background */
+  :global(.hero-page footer button) {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.2s;
+  }
+
+  :global(.hero-page footer button:hover) {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    transform: scale(1.05);
+  }
+
+  :global(.hero-page footer button svg) {
+    color: white !important;
   }
 
   /* Fade-in animations */
@@ -100,7 +111,7 @@ import heroImage from "@/images/frogs/Hylorinas.jpeg";
     animation: fadeIn 0.8s ease-out 0.2s both;
   }
 
-  .animate-fade-in-delay-2{
+  .animate-fade-in-delay-2 {
     animation: fadeIn 0.8s ease-out 0.4s both;
   }
 </style>
