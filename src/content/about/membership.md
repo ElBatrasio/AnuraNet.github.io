@@ -9,4 +9,4 @@ We welcome individuals from all backgrounds who wish to contribute to the collab
 
 To apply for membership, please complete the form linked below.
 
-[Membership Form](https://forms.gle/JpTs8nxqoeyMfatj9)
+[Membership Form](https://forms.gle/Ngkvq9WgGZuobtQb6)

@@ -44,19 +44,21 @@ import heroImage from "@/images/frogs/Hylorinas.jpeg";
 
           <div class="mt-10 flex items-center justify-center gap-x-6 animate-fade-in-delay-2">
             <a
-              href="/contact/membership"
+              href={`${import.meta.env.BASE_URL}/contact/membership`}
               class="group rounded-md bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg hover:bg-emerald-500 hover:shadow-xl hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 transition-all duration-200"
             >
               Become a Member
               <span class="inline-block group-hover:translate-x-1 transition-transform duration-200">→</span>
             </a>
+            <!-- Learn more button commented out
             <a 
               href="/about/mission" 
               class="group text-base font-semibold text-white hover:text-emerald-300 transition-colors duration-200"
             >
-              <!-- Learn more  
+              Learn more
               <span class="inline-block group-hover:translate-x-1 transition-transform duration-200" aria-hidden="true">→</span>
-            </a> -->
+            </a>
+            -->
           </div>
         </div>
       </div>
@@ -98,7 +100,7 @@ import heroImage from "@/images/frogs/Hylorinas.jpeg";
     animation: fadeIn 0.8s ease-out 0.2s both;
   }
 
-  .animate-fade-in-delay-2 {
+  .animate-fade-in-delay-2{
     animation: fadeIn 0.8s ease-out 0.4s both;
   }
 </style>
