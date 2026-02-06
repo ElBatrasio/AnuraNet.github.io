@@ -9,6 +9,6 @@ Have a question about the AnuraNet network or a potential collaboration? The bes
 Our members connect and collaborate through a mailing list, a shared Slack workspace, and regular online meetings.
 These platforms are where our work and discussions happen.
 
-To join these spaces, please [become a member](membership) first.
+To join these spaces, please [become a member](/AnuraNet.github.io/contact/membership) first.
 You'll receive invitations to these channels once you've registered.
 
