@@ -5,11 +5,11 @@ import type {
 } from "@/types.ts";
 
 export const SITE: SiteConfiguration = {
-  title: "AnuraNet",
+  title: "AnuraNET",
   description:
     "Collaborative international network accelerating AI for anuran acoustic monitoring.",
   href: "https://elbatrasio.github.io/AnuraNet.github.io",
-  author: "AnuraNet Team",
+  author: "AnuraNET Team",
   locale: "en-GB",
 };
 
