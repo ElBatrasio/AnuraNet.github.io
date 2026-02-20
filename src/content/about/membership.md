@@ -10,5 +10,29 @@ We welcome individuals from all backgrounds who wish to contribute to the collab
 To apply for membership, please complete the form linked below.
 
 <h2>
-  <a href="https://forms.gle/Ngkvq9WgGZuobtQb6" style="color: #000000; text-decoration: underline; font-size: 1.5em;font-weight: bold"> Membership Form</a>
+  <a href="https://forms.gle/Ngkvq9WgGZuobtQb6" class="membership-link">Membership Form</a>
 </h2>
+
+<style>
+  /* Black for light mode */
+  .membership-link {
+    color: #000000 !important;
+    text-decoration: underline;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Explicitly for light mode */
+  :root .membership-link,
+  html:not(.dark) .membership-link,
+  body:not(.dark) .membership-link {
+    color: #000000 !important;
+  }
+  
+  /* White for dark mode */
+  html.dark .membership-link,
+  body.dark .membership-link,
+  .dark .membership-link {
+    color: #ffffff !important;
+  }
+</style>
