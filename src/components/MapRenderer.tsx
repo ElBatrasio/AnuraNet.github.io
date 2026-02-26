@@ -3,6 +3,7 @@
 import * as d3 from "d3";
 import { useEffect, useRef, useState } from "react";
 import { geoData, numData } from "@/data/geo";
+import collaborators from "@/data/collaborators.json";
 
 type MapProps = {
   counts: { [country: string]: number };
@@ -56,8 +57,14 @@ export default function MapRenderer({ counts }: MapProps) {
     .map((shape) => {
       const name = getName(shape.id);
       const regionData = counts[name];
+      const isCollaborator = collaborators.includes(name);
 
-      const className = regionData > 0 ? "fill-white" : "fill-neutral-500";
+      let className = "fill-neutral-500";
+      if (regionData > 0) {
+        className = "fill-white"; // Member country
+      } else if (isCollaborator) {
+        className = "fill-blue-400"; // Collaborator country (change color as desired)
+      }
 
       return (
         <path

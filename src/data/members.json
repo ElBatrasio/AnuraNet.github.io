@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Diego Llusia",
+    "role": "Researcher",
+    "country": "Spain",
+    "areas_of_study": ["Ecology", "Bioacoustics"],
+    "area_of_interest": "Amphibians",
+    "specific_interests": ["Bioacoustics", "Conservation"],
+    "skills": ["Fieldwork", "Data Analysis"],
+    "timestamp": "2026-02-26T12:00:00Z"
+  },
+  {
+    "name": "Juan Sebastian Ulloa",
+    "role": "Researcher",
+    "country": "Colombia",
+    "areas_of_study": ["Herpetology", "Bioacoustics"],
+    "area_of_interest": "Amphibians",
+    "specific_interests": ["Bioacoustics", "Conservation"],
+    "skills": ["Fieldwork", "Data Analysis"],
+    "timestamp": "2026-02-26T12:00:00Z"
+  },
+  {
+    "name": "Larisa Sugai",
+    "role": "Researcher",
+    "country": "Brazil",
+    "areas_of_study": ["Herpetology", "Bioacoustics"],
+    "area_of_interest": "Amphibians",
+    "specific_interests": ["Bioacoustics", "Conservation"],
+
+    "skills": ["Fieldwork", "Data Analysis"],
+    "timestamp": "2026-02-26T12:00:00Z"
+  },
+  {
+    "name": "Gabriel Bidart",
+    "role": "Researcher",
+    "country": "Chile",
+    "areas_of_study": ["Herpetology", "Bioacoustics"],
+    "area_of_interest": "Amphibians",
+    "specific_interests": ["Bioacoustics", "Conservation"],
+    "skills": ["Fieldwork", "Data Analysis"],
+    "timestamp": "2026-02-26T12:00:00Z"
+  },
+  {
+    "name": "Maria Paula Toro",
+    "role": "Researcher",
+    "country": "Colombia",
+    "areas_of_study": ["Herpetology", "Bioacoustics"],
+    "area_of_interest": "Amphibians",
+    "specific_interests": ["Bioacoustics", "Conservation"],
+    "skills": ["Fieldwork", "Data Analysis"],
+    "timestamp": "2026-02-26T12:00:00Z"
+  },
+  {
+    "name": "Juan Sebastian Cañas",
+    "role": "Researcher",
+    "country": "Inglaterra",
+    "areas_of_study": ["Herpetology", "Bioacoustics"],
+    "area_of_interest": "Amphibians",
+    "specific_interests": ["Bioacoustics", "Conservation"],
+    "skills": ["Fieldwork", "Data Analysis"],
+    "timestamp": "2026-02-26T12:00:00Z"
+  },
+  {
+    "name": "Rogério Bastos",
+    "role": "Researcher",
+    "country": "Brazil",
+    "areas_of_study": ["Herpetology", "Bioacoustics"],
+    "area_of_interest": "Amphibians",
+    "specific_interests": ["Bioacoustics", "Conservation"],
+    "skills": ["Fieldwork", "Data Analysis"],
+    "timestamp": "2026-02-26T12:00:00Z"
+  }
+]

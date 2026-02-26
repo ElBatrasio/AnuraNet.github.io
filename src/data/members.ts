@@ -1,7 +1,4 @@
-import { google } from "googleapis";
 
-const SPREADSHEET_ID = import.meta.env.MEMBER_SPREADSHEET_ID;
-const SPREADSHEET_RANGE = import.meta.env.MEMBER_SPREADSHEET_RANGE;
 
 export interface MemberInfo {
   timestamp: string;
@@ -48,40 +45,11 @@ function parseAreaOfStudy(areaOfStudy: string): string[] {
   );
 }
 
-export async function downloadAndParseMembers() {
-  const credentialsJson = import.meta.env.GCP_SERVICE_ACCOUNT_KEY;
-  if (!credentialsJson) {
-    throw new Error("GCP_SERVICE_ACCOUNT_KEY environment variable not set!");
-  }
 
-  const credentials = JSON.parse(credentialsJson);
-
-  const auth = new google.auth.GoogleAuth({
-    credentials,
-    scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
-  });
-  const sheets = google.sheets({ version: "v4", auth });
-
-  const response = await sheets.spreadsheets.values.get({
-    spreadsheetId: SPREADSHEET_ID,
-    range: SPREADSHEET_RANGE,
-  });
-
-  const rows = response.data.values;
-
-  if (!rows) {
-    throw new Error("No data found in the spreadsheet range.");
-  }
-
-  return rows.map((row: any) => ({
-    timestamp: row[0],
-    role: row[4],
-    country: parseCountry(row[5]),
-    areas_of_study: parseAreaOfStudy(row[6]),
-    area_of_interest: row[7],
-    specific_interests: row[8],
-    skills: parseSkills(row[9]),
-  }));
+export async function downloadAndParseMembers(): Promise<MemberInfo[]> {
+  // Load local JSON file instead of Google Sheets
+  const members: MemberInfo[] = (await import("./members.json")).default;
+  return members;
 }
 
 export async function getMembers(): Promise<MemberInfo[]> {
