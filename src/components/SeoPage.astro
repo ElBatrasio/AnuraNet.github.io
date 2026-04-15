@@ -10,16 +10,35 @@ const { title = SITE.title, description = SITE.description } = Astro.props;
 
 const ogImage = new URL("./og.jpg", Astro.site);
 const ogImageAlt = title;
+const canonicalUrl = Astro.url;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: SITE.title,
+      url: SITE.href,
+      description: SITE.description,
+    },
+    {
+      "@type": "WebSite",
+      name: SITE.title,
+      url: SITE.href,
+      inLanguage: SITE.locale,
+    },
+  ],
+};
 ---
 
 <title>{title}</title>
 <meta name="description" content={description} />
-<link rel="canonical" href={SITE.href} />
+<link rel="canonical" href={canonicalUrl} />
 
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
 <meta property="og:image:alt" content={ogImageAlt} />
+<meta property="og:url" content={canonicalUrl} />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content={SITE.locale} />
 
@@ -28,3 +47,5 @@ const ogImageAlt = title;
 <meta name="twitter:image" content={ogImage} />
 <meta name="twitter:image:alt" content={ogImageAlt} />
 <meta name="twitter:card" content="summary_large_image" />
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
