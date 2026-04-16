@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { SITE } from "@/siteConfig";
 
 export async function GET(context) {
-  const blog = await getCollection("blog");
+  const blog = await getCollection("news");
   return rss({
     title: SITE.title,
     description: SITE.description,
