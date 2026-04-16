@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elbatrasio.github.io/AnuraNet.github.io/sitemap.xml
